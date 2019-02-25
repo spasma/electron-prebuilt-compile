@@ -1,6 +1,6 @@
 {
   "name": "electron-prebuilt-compile",
-  "version": "4.0.0-beta.10",
+  "version": "4.0.5",
   "description": "electron-prebuilt that automatically understands Babel + React + LESS",
   "bin": {
     "electron": "lib/cli.js"
@@ -8,7 +8,8 @@
   "main": "lib/main.js",
   "scripts": {
     "compile": "babel -d lib/ src/",
-    "prepublish": "npm run compile && cp ./node_modules/electron/electron.d.ts ."
+    "prepublish": "npm run compile && cp ./node_modules/electron/electron.d.ts .",
+    "update": "sh update-version.sh"
   },
   "repository": {
     "type": "git",
@@ -36,9 +37,11 @@
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-es2016-node5": "^1.1.2",
     "babel-preset-react": "^6.24.1",
-    "electron": "4.0.0-beta.10",
+    "edit-json-file": "^1.2.1",
+    "electron": "4.0.5",
     "electron-compile": "*",
     "electron-compilers": "*",
+    "latest-version": "^4.0.0",
     "yargs": "^6.6.0"
   },
   "devDependencies": {
